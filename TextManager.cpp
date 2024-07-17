@@ -1,6 +1,6 @@
 #include "TextManager.h"
 
-std::shared_ptr<Character> TextManager::addCharacter(const char& c)
+const std::shared_ptr<Character> TextManager::addCharacter(const char& c)
 {
     textSize++;
     auto character = std::shared_ptr<Character>(new Character(c));

@@ -25,3 +25,8 @@ void Render::events()
 			m_running = false;
 	}
 }
+
+sf::RenderWindow& Render::window()
+{
+	return m_window;
+}

@@ -16,4 +16,5 @@ public:
 
 	void render();
 	void events();
+	sf::RenderWindow& window();
 };
