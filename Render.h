@@ -14,6 +14,8 @@ public:
 
 	bool running();
 
+	void update();
+
 	void render();
 	void events();
 	sf::RenderWindow& window();

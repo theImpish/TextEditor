@@ -10,10 +10,14 @@ bool Render::running()
 	return m_running;
 }
 
+void Render::update()
+{
+}
+
 void Render::render()
 {
-	m_window.clear(sf::Color(163, 231, 252));
 	m_window.display();
+	m_window.clear(sf::Color(163, 231, 252));
 }
 
 void Render::events()
@@ -23,6 +27,12 @@ void Render::events()
 	{
 		if (event.type == sf::Event::Closed)
 			m_running = false;
+
+		if (event.type == sf::Event::Resized)
+		{
+			sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+			m_window.setView(sf::View(visibleArea));
+		}
 	}
 }
 
