@@ -123,6 +123,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Libraries\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,16 +135,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AppEngine.cpp" />
+    <ClCompile Include="Assets.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="TextEditor.cpp" />
     <ClCompile Include="TextManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AppEngine.h" />
+    <ClInclude Include="Assets.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="TextEditor.h" />
     <ClInclude Include="TextManager.h" />
     <ClInclude Include="Components.h" />
-    <ClInclude Include="Render.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
