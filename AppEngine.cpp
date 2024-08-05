@@ -1,5 +1,7 @@
 #include "AppEngine.h"
 
+#include <iostream>
+
 AppEngine::AppEngine()
 {
 	init();
@@ -60,9 +62,10 @@ void AppEngine::events(TextManager& text)
 			m_window.setView(sf::View(visibleArea));
 		}
 
-		//if (event.type == sf::Event::TextEntered)
-		//{
-		//	text.addCharacter((char)event.TextEntered);
-		//}
+		if (event.type == sf::Event::TextEntered)
+		{
+			text.addCharacter((char)event.text.unicode, m_assets.getFont("JetBrains"));
+			std::cout << (char)event.text.unicode;
+		}
 	}
 }
